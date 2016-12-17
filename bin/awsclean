@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+# (c) 2016, Johnny Niu <johnny.x.niu@gmail.com>
+#
+# This file is part of AwsClean
+#
+
+import sys
+sys.path.insert(0, './lib/')
+
+from awsclean import *
+from awsclean.s3 import *
+
+if(commandline.args.action == 'plan'):
+    s3.resource.s3clean.plan()
+else:
+    s3.resource.s3clean.destroy()
