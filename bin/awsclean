@@ -10,6 +10,7 @@ sys.path.insert(0, './lib/')
 
 from awsclean import *
 from awsclean.s3 import *
+from awsclean.ec2 import *
 
 if(commandline.args.action == 'plan'):
     s3.resource.s3clean.plan()
